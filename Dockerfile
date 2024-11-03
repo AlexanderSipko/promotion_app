@@ -3,25 +3,21 @@ FROM node:20-alpine AS BUILDER
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+RUN npm install --save --legacy-peer-deps
 
-# Copy the rest of the application files
-COPY . .
+COPY . ./
 
-# Build the application
+# Собираем приложение
 RUN npm run build
 
-# Use Nginx to serve the built application
+# Затем используем nginx для обслуживания собранного статического приложения
 FROM nginx:1.21.0-alpine
 
-# Copy the build output from the builder stage to Nginx
+# Копируем собранное приложение из предыдущего образа в каталог nginx
 COPY --from=BUILDER /app/dist /usr/share/nginx/html
-
-# Copy the Nginx configuration file
+# Копируем наш конфигурационный файл nginx
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
