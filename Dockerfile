@@ -1,5 +1,4 @@
-# Stage 1: Build the React application 
-FROM node:14 as build
+FROM node:20-alpine as BUILDER
 
 WORKDIR /app
 
@@ -11,13 +10,12 @@ COPY . .
 
 RUN npm run build
 
-# Stage 2: Serve the React application using Nginx
-FROM nginx:stable-alpine
+# Затем используем nginx для обслуживания собранного статического приложения
+FROM nginx:1.21.0-alpine
 
-COPY --from=build build /usr/share/nginx/html
-
-# Copy the default nginx.conf provided by the docker image
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=BUILDER /app/dist /usr/share/nginx/html
+# Копируем наш конфигурационный файл nginx
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
