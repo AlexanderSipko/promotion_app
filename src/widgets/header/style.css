@@ -43,3 +43,13 @@ header ul li:nth-child(n+2):hover::after  {
 header ul li:nth-child(n+2):active  {
     transform: scale(0.9);
 }
+
+header ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header ul li a:focus, header ul li a:active, header ul li a:visited {
+    text-decoration: none;
+    color: inherit;
+}
