@@ -5,6 +5,7 @@ import { HomePage } from '@/pages/Home'
 import { NotFound } from '@/pages/NotFound'
 import { Content  } from '@/widgets/Content';
 
+
 const AppRouter = () => {
     return (
         <Router>

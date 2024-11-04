@@ -8,7 +8,7 @@ header {
 header ul {
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     list-style-type: none;
     gap: 1rem;
 }
