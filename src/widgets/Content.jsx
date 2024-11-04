@@ -8,17 +8,19 @@ const TYPE_CONTENT = {
     info:"Outlet 2' - it's children element",
     todo:<>
         <ul>
-            <li><strike>подключить MobX</strike>
-                <button onClick={() => {counter.increment()}}>+</button>
-                <br />
-                <button onClick={() => {counter.decrement()}}>-</button>
-            </li>
+            <li>сделать калькулятор теории вероятности</li>
+            <li>навести порядок в структуре контента</li>
             <li>реализовать вложенный оутлет</li>
             <li>на каждом уровне вложенности сделать возврат</li>
             <li>реализовать хлебные крошки</li>
             <li><strike>разделить глобальные стили и локальные</strike></li>
             <li><strike>сделать шапку приложения</strike></li>
             <li><strike>сделать ссылки роутинга в шапке</strike></li>
+            <li><strike>подключить MobX</strike>
+                <button onClick={() => {counter.increment()}}>+</button>
+                <br />
+                <button onClick={() => {counter.decrement()}}>-</button>
+            </li>
         </ul>
     </>,
 }
