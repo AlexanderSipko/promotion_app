@@ -20,6 +20,7 @@ COPY --from=BUILDER /app/dist /usr/share/nginx/html
 # Копируем наш конфигурационный файл nginx
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
+
 # Expose port 80
 EXPOSE 8080
 
