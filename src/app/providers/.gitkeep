@@ -1,0 +1,26 @@
+# Context and other providers for app-wide state or config
+
+src/
+    ├── app/                 # Core application setup, configuration, and routing
+    │   ├── providers/       # Context and other providers for app-wide state or config
+    │   ├── routes/          # Main application routes
+    │   └── App.jsx          # Main application component
+    │   └── index.jsx        # Entry point, rendering App to the DOM
+    ├── pages/               # Each page, with its own routes, components, etc.
+    │   ├── Home/            # Home page, typically has routes and components
+    │   ├── Profile/         # Profile page with routes, components, etc.
+    │   └── NotFound/        # 404 or catch-all route page
+    ├── widgets/             # Complex reusable UI elements, composed of multiple components
+    │   ├── Header/          # Example: Header component for the app
+    │   └── Sidebar/         # Example: Sidebar navigation
+    ├── features/            # Business logic features, potentially reusable across pages
+    │   ├── Auth/            # Authentication logic, hooks, and components
+    │   └── User/            # User-specific features (e.g., profile management)
+    ├── entities/            # Represent domain-specific objects, e.g., User, Post
+    │   ├── User/            # Components, model, and state for "User" entity
+    │   └── Product/         # Example entity with UI components, data models
+    ├── shared/              # Shared, generic, and reusable components, hooks, and utilities
+    │   ├── ui/              # Basic UI components (e.g., Button, Input, Modal)
+    │   ├── hooks/           # Custom React hooks
+    │   └── lib/             # Utility functions, helper libraries
+    └── assets/              # Static assets (images, fonts, etc.)

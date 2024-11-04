@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+:root {
+    --background-color: rgb(50, 50, 50);
+    --h-color: #fff;
+}
+
+.light-theme {
+    --background-color: #fff;
+    --h-color: #000;
+}

@@ -1,0 +1,45 @@
+
+header {
+    background-color: var(--background-color, black);
+    color: var(--h-color, white);
+    transition: all 200ms ease-in-out;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+header ul li:first-child {
+    flex: 1;
+}
+
+header ul li:nth-child(n+2) {
+    cursor: pointer;
+    text-transform: lowercase;
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+header ul li:nth-child(n+2)::after {
+    content: '';
+    position: absolute;
+    translate: -50% -50%;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    border-bottom: 0px solid;
+    transition: all 500ms ease-in-out;
+}
+
+header ul li:nth-child(n+2):hover::after  {
+    border-bottom: 0.5px solid;
+    width: 100%;
+}
+
+header ul li:nth-child(n+2):active  {
+    transform: scale(0.9);
+}

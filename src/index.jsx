@@ -1,11 +1,9 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import { App } from '@/app/App'
+import '@/app/style/global.css'
 
-import { App } from './app/routes/index'
-import './app/styles/style.css'
-
-const reactRoot = createRoot(
-  document.getElementById('root')!,
+const reactRoot = createRoot(document.getElementById('root')
 )
 
 reactRoot.render(
