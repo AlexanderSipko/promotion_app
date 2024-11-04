@@ -16,7 +16,7 @@ export function Header () {
             <li>LOGO</li>
             <li><Link to={''}>Home</Link></li>
             <li><Link to={'info'}>inform</Link></li>
-            <li><Link to={'todo'}>inform</Link></li>
+            <li><Link to={'todo'}>todo</Link></li>
             <li><Link to={'info'}>My</Link></li>
             <li>
                 <p onClick={() => {changeGlobalTheme()}}>{themeDark ? 'Dark' : 'White'}</p>
