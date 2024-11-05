@@ -3,14 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 18px;
+    
 }
 
+
+
 :root {
-    --background-color: rgb(50, 50, 50);
+    --background-header: linear-gradient(124.64deg, #027dfd, #833ef2);
+    --background-main-content: linear-gradient(145deg, #037efe 30%, #1cdac6 90%);
     --h-color: #fff;
 }
 
 .light-theme {
-    --background-color: #fff;
+    --background-header: linear-gradient(124.64deg, #833ef2, #027dfd);
+    --background-main-content: linear-gradient(145deg, #1cdac6 90%, #037efe 30%);
     --h-color: #000;
 }

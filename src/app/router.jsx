@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Outlet  } from 'react-router-dom';
 import { HomePage } from '@/pages/Home'
 import { NotFound } from '@/pages/NotFound'
-import { Content  } from '@/widgets/Content';
+import { Content  } from '@/widgets/content';
 
 
 const AppRouter = () => {

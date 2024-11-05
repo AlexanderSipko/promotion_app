@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react';
-import counter from '../app/store/counter'
+import counter from '../../app/store/counter'
+import './style.css'
 
 const TYPE_CONTENT = {
     default:"",

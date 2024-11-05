@@ -1,0 +1,7 @@
+
+
+div {
+    background: var(--background-main-content, black);
+    color: var(--h-color, white);
+    transition: all 200ms ease-in-out;
+}

@@ -20,6 +20,7 @@ export function Header () {
             <li><Link to={'info'}>My</Link></li>
             <li>
                 <p onClick={() => {changeGlobalTheme()}}>{themeDark ? 'Dark' : 'White'}</p>
+                
             </li>
         </ul>
         

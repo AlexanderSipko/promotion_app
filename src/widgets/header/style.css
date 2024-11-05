@@ -1,6 +1,6 @@
 
 header {
-    background-color: var(--background-color, black);
+    background: var(--background-header, black);
     color: var(--h-color, white);
     transition: all 200ms ease-in-out;
 }
