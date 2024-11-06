@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Outlet  } from 'react-router-do
 import { HomePage } from '@/pages/Home'
 import { NotFound } from '@/pages/NotFound'
 import { Content  } from '@/widgets/content';
+import { Probability  } from '@/widgets/probability';
 
 
 const AppRouter = () => {
@@ -11,9 +12,8 @@ const AppRouter = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<HomePage />} >
-                    <Route path="" element={<Content type={'default'} />} />
-                    <Route path="info" element={<Content type={'info'} />} />
-                    <Route path="todo" element={<Content type={'todo'} />} ></Route>
+                    <Route path="" element={<Content />} />
+                    <Route path="Probability" element={<Probability />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>

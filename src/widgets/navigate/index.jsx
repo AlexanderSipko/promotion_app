@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom";
+import { MoonOutlined, SunOutlined } from '@ant-design/icons';
 import './style.css'
 
 export function Header () {
@@ -11,18 +12,16 @@ export function Header () {
         setThemeDark(!themeDark)
     }
 
-    return <header>
+    return <nav>
         <ul>
             <li>LOGO</li>
             <li><Link to={''}>Home</Link></li>
-            <li><Link to={'info'}>inform</Link></li>
-            <li><Link to={'todo'}>todo</Link></li>
-            <li><Link to={'info'}>My</Link></li>
+            <li><Link to={'Probability'}>Probability</Link></li>
+            <li><Link to={'ToDo'} >ToDo</Link></li>
             <li>
-                <p onClick={() => {changeGlobalTheme()}}>{themeDark ? 'Dark' : 'White'}</p>
-                
+                <p onClick={() => {changeGlobalTheme()}}>{themeDark ? <MoonOutlined /> : <SunOutlined />}</p>
             </li>
         </ul>
         
-    </header>
+    </nav>
 }

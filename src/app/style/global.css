@@ -6,16 +6,48 @@
     
 }
 
-
-
 :root {
-    --background-header: linear-gradient(124.64deg, #027dfd, #833ef2);
-    --background-main-content: linear-gradient(145deg, #037efe 30%, #1cdac6 90%);
+    --border-color: #027dfd;
+    --border-color-two: #833ef2;
+    --background-header: linear-gradient(124.64deg, var(--border-color), var(--border-color-two));
+    --background-main-content: linear-gradient(145deg, var(--border-color), var(--border-color-two));
+    --box-shadow: 0 0 2px var(--border-color);
+    --background-main-content: rgb(48, 48, 48);
     --h-color: #fff;
 }
 
 .light-theme {
-    --background-header: linear-gradient(124.64deg, #833ef2, #027dfd);
-    --background-main-content: linear-gradient(145deg, #1cdac6 90%, #037efe 30%);
+    --border-color: #833ef2;
+    --border-color-two: #027dfd;
+    --background-header: linear-gradient(124.64deg, var(--border-color), var(--border-color-two));
+    --background-main-content: linear-gradient(145deg, var(--border-color), var(--border-color-two));
+
+    --box-shadow: 0 0 2px var(--border-color);
+    --background-main-content: #fff;
     --h-color: #000;
+}
+
+body {
+    background: var(--background-main-content);
+    transition: background 200ms ease-in-out;
+    color: var(--h-color, white);
+}
+
+.margin-1-04-center {
+    margin: 0 auto;
+    margin-top: 0.4rem;
+    margin-top: 1rem;
+}
+
+.padding-05 {
+    padding: 0.5rem;
+}
+
+.width-height {
+    width: calc(100% - 1rem);
+    min-height: calc(30vh - 4rem);
+}
+
+.shadow-01 {
+    box-shadow: var(--box-shadow);
 }

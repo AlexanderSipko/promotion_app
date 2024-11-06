@@ -1,13 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react';
+import probabilityCalculator from '../../app/store/зrobabilityСounter'
+import { RightCircleFilled } from '@ant-design/icons';
 import './style.css'
 
-const Content = observer(({ type }) => {
+const Probability = observer(({ type }) => {
     const navigate = useNavigate();
 
     return (
-        <div className='margin-1-04-center padding-05 width-height'>
+        <div className='content'>
             some content
         </div>
     );
