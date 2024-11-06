@@ -3,7 +3,7 @@
 div.wrapper-input {
     display: flex;
     flex-direction: column;
-    max-width: 20%;
+    max-width: 50%;
     padding-left: 1rem;
 }
 
@@ -17,7 +17,7 @@ div.wrapper-input label {
 
 div.wrapper-input input[type='number'] {
     color: var(--h-color);
-    width: 30%;
+    width: 80%;
     min-width: 50px;
     border: none;
     background-color: inherit;
@@ -41,7 +41,7 @@ div.wrapper-input  input[type="number"]::-webkit-inner-spin-button {
 div.wrapper-input input[type='number']:focus,
 div.wrapper-input input[type='number']:active,
 div.wrapper-input input[type='number']:hover {
-    width: 35%;
+    width: 80%;
     min-width: 50px;
     border-radius: 0px;
     outline: none;
