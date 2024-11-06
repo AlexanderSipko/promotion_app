@@ -4,32 +4,34 @@ import { observer } from 'mobx-react';
 import probabilityCalculator from '@/app/store/probabilityCalculator';
 import { CloseCircleOutlined } from '@ant-design/icons';
 import {roundTo, getProbabilityDescription} from './utils'
+import { LabelAndInputNumber } from '../../components/input';
 import './style.css';
 
 
-const InputFields = observer(({ handleReset }) => {
+const InputFields = observer(() => {
+
     return (
         <div>
-            <label htmlFor="totalEvents">количество событий</label>
-            <input
-                type="number"
-                value={probabilityCalculator.totalEvents || ''}
-                name='totalEvents'
-                onChange={(e) => probabilityCalculator.addTotalEvents(Number(e.target.value))}
-                placeholder="Введите общее количество событий"
-            />
-            <label htmlFor="favorableEvents">количество благоприятных событий</label>
-            <input
-                type="number"
-                value={probabilityCalculator.favorableEvents || ''}
-                name='favorableEvents'
-                onChange={(e) => probabilityCalculator.addFavorableEvents(Number(e.target.value))}
-                placeholder="Введите количество благоприятных событий"
-            />
-            <br />
-            <span onClick={handleReset}>
-                <CloseCircleOutlined />
-            </span>
+            <LabelAndInputNumber
+                props={{
+                    inputName:'totalEvents',
+                    inputValue:probabilityCalculator.totalEvents || '',
+                    cls:probabilityCalculator,
+                    funName:'addTotalEvents',
+                    placeholder:"Введите общее количество событий",
+                    label:'Всего вариантов'
+                }}
+            ></LabelAndInputNumber>
+            <LabelAndInputNumber
+                props={{
+                    inputName:'favorableEvents',
+                    inputValue:probabilityCalculator.favorableEvents || '',
+                    cls:probabilityCalculator,
+                    funName:'addFavorableEvents',
+                    placeholder:"Введите количество благоприятных событий",
+                    label:'Количество вариантов которое вас устраивает'
+                }}
+            ></LabelAndInputNumber>
         </div>
     );
 });
@@ -64,8 +66,11 @@ const Probability = observer(({ type }) => {
                 Чтобы вычислить вероятность, используйте калькулятор ниже.
                 Введите общее количество событий и количество благоприятных событий, затем нажмите кнопку Вычислить:
             </div>
-            <InputFields handleReset={handleReset} />
+            <InputFields/>
             {(probabilityCalculator.result > 0) && <ProbabilityResult />}
+            <span onClick={handleReset}>
+                <CloseCircleOutlined />
+            </span>
         </div>
     );
 });

@@ -1,0 +1,16 @@
+
+
+div.wrapper-input {
+    display: flex;
+    flex-direction: column;
+}
+
+div.wrapper-input label,  div.wrapper-input input[type='text'] {
+    display: block;
+}
+
+div.wrapper-input input[type='text'] {
+    border: none;
+    background-color: inherit;
+    border-radius: 0.4rem;
+}
