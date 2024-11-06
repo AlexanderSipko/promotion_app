@@ -30,3 +30,14 @@
     padding-top: 1rem;
     opacity: 0.6;
 }
+
+.history-probability-result {
+    padding: 1rem;
+    overflow: auto;
+    max-height: 10rem;
+}
+
+.probability-save {
+    cursor: pointer;
+    margin-left: 1rem;
+}
