@@ -1,16 +1,26 @@
 
 .ProbabilityResult-text {
-    margin: 1rem 0.5rem;
+    margin: 1rem 1rem;
     border: 1px solid rgb(236, 236, 236);
+    border-radius: 0.2rem;
     padding: 1rem;
 }
+
+
 
 .ProbabilityResult-text div:first-child p {
     text-transform: uppercase;
     font-weight: bold;
 }
 
+.ProbabilityResult-text div:first-child p::before {
+    content: 'вероятность';
+    padding-right: 1rem;
+    text-transform: lowercase;
+}
+
 .ProbabilityResult-text div:nth-child(2) p {
+    margin-top: 1rem;
     padding-left: 1rem;
 }
 

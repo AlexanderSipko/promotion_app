@@ -19,7 +19,7 @@ const InputFields = observer(() => {
                     cls:probabilityCalculator,
                     funName:'addTotalEvents',
                     placeholder:"0",
-                    label:'Всего вариантов'
+                    label:'все варианты'
                 }}
             ></LabelAndInputNumber>
             <LabelAndInputNumber
@@ -29,7 +29,7 @@ const InputFields = observer(() => {
                     cls:probabilityCalculator,
                     funName:'addFavorableEvents',
                     placeholder:"0",
-                    label:'Нужные варианты'
+                    label:'ожидаемые варианты'
                 }}
             ></LabelAndInputNumber>
         </div>
@@ -40,7 +40,7 @@ const ProbabilityResult = observer(() => {
     return (
         <div className='ProbabilityResult-text'>
             <div>
-                <p>Вероятность: P = {roundTo(probabilityCalculator.result, 2)}</p>
+                <p>{roundTo(probabilityCalculator.result * 100, 2)} %</p>
             </div>
             <div>
                 <p>{getProbabilityDescription(probabilityCalculator.result)}</p>
@@ -63,14 +63,14 @@ const Probability = observer(({ type }) => {
     return (
         <div className='shadow-01 margin-1-04-center padding-05 width-height'>
             <div>
-                
-                Калькулятор вероятности при наличии нескольких исходов:
+                <h1>Расчет вероятности наступления события:</h1>
             </div>
             <InputFields/>
             {(probabilityCalculator.result > 0) && <ProbabilityResult />}
-            <span onClick={handleReset}>
+            
+            {/* <span onClick={handleReset}>
                 <CloseCircleOutlined />
-            </span>
+            </span> */}
         </div>
     );
 });
