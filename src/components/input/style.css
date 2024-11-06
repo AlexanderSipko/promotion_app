@@ -3,14 +3,45 @@
 div.wrapper-input {
     display: flex;
     flex-direction: column;
+    max-width: 20%;
+    padding-left: 1rem;
 }
 
-div.wrapper-input label,  div.wrapper-input input[type='text'] {
+div.wrapper-input label,  div.wrapper-input input[type='number'] {
     display: block;
 }
 
-div.wrapper-input input[type='text'] {
+div.wrapper-input label {
+    opacity: 0.4;
+}
+
+div.wrapper-input input[type='number'] {
+    color: var(--h-color);
+    width: 30%;
     border: none;
     background-color: inherit;
-    border-radius: 0.4rem;
+    margin-left: 0.4rem;
+    border: 0;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff00;
+    border-radius: 0.2rem;
+    box-shadow: var(--box-shadow-input);
+    transition: border-color 200ms ease-in-out, width 200ms linear, border-radius 200ms linear;
+}
+
+div.wrapper-input  input[type="number"]::-webkit-outer-spin-button,
+div.wrapper-input  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    border-radius: 0px;
+}
+
+div.wrapper-input input[type='number']:focus,
+div.wrapper-input input[type='number']:active,
+div.wrapper-input input[type='number']:hover {
+    width: 35%;
+    border-radius: 0px;
+    outline: none;
+    border-color: var(--border-color);
 }

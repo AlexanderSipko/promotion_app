@@ -18,7 +18,7 @@ const InputFields = observer(() => {
                     inputValue:probabilityCalculator.totalEvents || '',
                     cls:probabilityCalculator,
                     funName:'addTotalEvents',
-                    placeholder:"Введите общее количество событий",
+                    placeholder:"0",
                     label:'Всего вариантов'
                 }}
             ></LabelAndInputNumber>
@@ -28,8 +28,8 @@ const InputFields = observer(() => {
                     inputValue:probabilityCalculator.favorableEvents || '',
                     cls:probabilityCalculator,
                     funName:'addFavorableEvents',
-                    placeholder:"Введите количество благоприятных событий",
-                    label:'Количество вариантов которое вас устраивает'
+                    placeholder:"0",
+                    label:'Нужные варианты'
                 }}
             ></LabelAndInputNumber>
         </div>
@@ -38,9 +38,9 @@ const InputFields = observer(() => {
 
 const ProbabilityResult = observer(() => {
     return (
-        <div>
+        <div className='ProbabilityResult-text'>
             <div>
-                Вероятность: P = {roundTo(probabilityCalculator.result, 2)}
+                <p>Вероятность: P = {roundTo(probabilityCalculator.result, 2)}</p>
             </div>
             <div>
                 <p>{getProbabilityDescription(probabilityCalculator.result)}</p>
@@ -63,8 +63,8 @@ const Probability = observer(({ type }) => {
     return (
         <div className='shadow-01 margin-1-04-center padding-05 width-height'>
             <div>
-                Чтобы вычислить вероятность, используйте калькулятор ниже.
-                Введите общее количество событий и количество благоприятных событий, затем нажмите кнопку Вычислить:
+                
+                Калькулятор вероятности при наличии нескольких исходов:
             </div>
             <InputFields/>
             {(probabilityCalculator.result > 0) && <ProbabilityResult />}

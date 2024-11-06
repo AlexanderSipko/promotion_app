@@ -13,6 +13,7 @@
     --background-main-content: linear-gradient(145deg, var(--border-color), var(--border-color-two));
     --box-shadow: 0 0 2px var(--border-color);
     --background-main-content: rgb(48, 48, 48);
+    --box-shadow-input: 0 0 4px rgba(244, 244, 244, 0.796);
     --h-color: #fff;
 }
 
@@ -24,6 +25,7 @@
 
     --box-shadow: 0 0 2px var(--border-color);
     --background-main-content: #fff;
+    --box-shadow-input: 0 0 4px rgba(128, 128, 128, 0.605);
     --h-color: #000;
 }
 

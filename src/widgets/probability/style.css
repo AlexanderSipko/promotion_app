@@ -1,1 +1,22 @@
 
+.ProbabilityResult-text {
+    margin: 1rem 0.5rem;
+    border: 1px solid rgb(236, 236, 236);
+    padding: 1rem;
+}
+
+.ProbabilityResult-text div:first-child p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ProbabilityResult-text div:nth-child(2) p {
+    padding-left: 1rem;
+}
+
+.ProbabilityResult-text div:last-child p {
+    text-transform: lowercase;
+    font-size: 16px;
+    padding-top: 1rem;
+    opacity: 0.6;
+}
