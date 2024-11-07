@@ -11,4 +11,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'), // Adjust 'src' if your structure is different
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      },
+      sass: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
+  }
 })

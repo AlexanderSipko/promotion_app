@@ -1,0 +1,24 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$gradient-color: linear-gradient(90deg, #ff7e5f, #feb47b); // Градиентный цвет
+$nav-height-small-screen: 1.1rem; // Высота шипки навигации для маленьких экранов
+$nav-height-large-screen: 2rem; // Высота шапки навигации для больших экранов
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+%box-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+%box-padding {
+    padding: .2rem .5rem;
+}
+
+
+

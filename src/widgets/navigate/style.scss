@@ -1,0 +1,61 @@
+@use '../../app/style/global' as *; // Ensure this path is correct
+
+
+nav {
+  @extend %box-shadow;
+  @extend %box-padding;
+  background: $gradient-color;
+  position: fixed; // Фиксированное положение для мобильных
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; // Чтобы шапка была выше других элементов
+  ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      li {
+          a {
+              text-decoration: none;
+              color: white; // Цвет текста
+              @extend %box-padding;
+              transition: color 0.3s;
+              &:hover {
+                  color: #696867; // Цвет при наведении
+              }
+          }
+
+          p {
+              cursor: pointer;
+              color: white; // Цвет иконки
+              font-size: 16px; // Размер иконки
+          }
+      }
+  }
+}
+
+// Мобильные стили
+@media (max-width: 768px) {
+  nav {
+      ul {
+          height: $nav-height-small-screen;
+          flex-direction: row; // Вертикальное расположение для мобильных
+          justify-content: flex-start;
+          li {
+              width: 100%; // Полная ширина для элементов списка
+          }
+      }
+  }
+}
+
+// Десктопные стили
+@media (min-width: 769px) {
+  nav {
+      ul {
+          height: $nav-height-large-screen;
+          justify-content: flex-end;
+      }
+  }
+}

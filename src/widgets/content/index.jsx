@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import './style.css'
 
+
 const Content = observer(({ type }) => {
     const navigate = useNavigate();
 
@@ -10,7 +11,9 @@ const Content = observer(({ type }) => {
     return (
         <div className='margin-1-04-center padding-05 width-height'>
             some content
-            <div style={{'height':'2000px'}}></div>
+            <h1 className="text-3xl font-bold uppercase underline">
+      Hello world!
+    </h1>
         </div>
     );
 });

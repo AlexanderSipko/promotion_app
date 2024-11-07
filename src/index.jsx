@@ -1,7 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from '@/app/App'
-// import '@/app/style/global.css'
+// import './index.css'
+import '@/app/style/global.scss'
 
 const reactRoot = createRoot(document.getElementById('root')
 )
