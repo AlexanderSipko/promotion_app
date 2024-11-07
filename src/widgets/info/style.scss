@@ -1,0 +1,24 @@
+@use '../../app/style/global' as *; // Ensure this path is correct
+
+
+$plus-margin-top: .4rem;
+
+div.info-dev  {
+    margin-top: $nav-height-small-screen + $plus-margin-top;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        font: {
+            size: 14px;
+            color: gray;
+        };
+    }
+}
+
+
+@media (min-width: 769px)  {
+    div.info-dev  {
+        margin-top: $nav-height-large-screen + $plus-margin-top;
+  }
+}
