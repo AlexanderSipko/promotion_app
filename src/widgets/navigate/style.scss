@@ -43,9 +43,6 @@ nav {
           height: $nav-height-small-screen;
           flex-direction: row; // Вертикальное расположение для мобильных
           justify-content: flex-start;
-          li {
-              width: 100%; // Полная ширина для элементов списка
-          }
       }
   }
 }
@@ -57,5 +54,13 @@ nav {
           height: $nav-height-large-screen;
           justify-content: flex-end;
       }
+  }
+}
+
+// Стили для горизонтальной ориентации
+@media (orientation: landscape) {
+  nav {
+      // Добавьте дополнительные стили при необходимости
+      width: 100%; // Полная ширина для элементов списка
   }
 }
