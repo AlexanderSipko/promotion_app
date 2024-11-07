@@ -18,6 +18,7 @@ const Content = observer(({ type }) => {
     return (
         <div className='margin-1-04-center padding-05 width-height'>
             some content
+            <div style={{'height':'2000px'}}></div>
         </div>
     );
 });
