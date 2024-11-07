@@ -49,7 +49,7 @@ body {
 .width-height {
     width: calc(100% - 0.5rem);
     min-height: calc(30vh - 4rem);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .shadow-01 {
