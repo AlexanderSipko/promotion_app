@@ -5,6 +5,7 @@ div.info-dev {
     color: var(--h-color, white);
     transition: all 200ms ease-in-out;
     border-bottom: 0.2px solid var(--border-color);
+    margin-top: 2rem;
 }
 
 div.info-dev h1 {

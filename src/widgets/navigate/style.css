@@ -1,7 +1,8 @@
 
 nav {
-    position: static;
+    position: fixed;
     top: 0;
+    width: 100%;
     background: var(--background-header, black);
     color: var(--h-color, white);
     transition: all 200ms ease-in-out;
