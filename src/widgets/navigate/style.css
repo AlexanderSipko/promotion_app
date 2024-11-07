@@ -1,5 +1,7 @@
 
 nav {
+    position: static;
+    top: 0;
     background: var(--background-header, black);
     color: var(--h-color, white);
     transition: all 200ms ease-in-out;

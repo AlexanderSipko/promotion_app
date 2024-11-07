@@ -34,6 +34,7 @@
 .history-probability-result {
     padding: 1rem;
     overflow: auto;
+    height: 100%;
     max-height: 10rem;
 }
 

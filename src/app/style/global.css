@@ -35,6 +35,12 @@ body {
     color: var(--h-color, white);
 }
 
+@media screen and (max-width: 768px) { /* Применяем для мобильных устройств */
+    body {
+        overflow: hidden; /* Запрет прокрутки для мобильных */
+    }
+}
+
 .margin-1-04-center {
     margin: 0 auto;
     margin-top: 0.4rem;
