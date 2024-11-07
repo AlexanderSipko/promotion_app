@@ -5,7 +5,7 @@ import probabilityCalculator from '@/app/store/probabilityCalculator';
 import { CloseCircleOutlined, EditOutlined } from '@ant-design/icons';
 import {roundTo, getProbabilityDescription} from './utils'
 import { LabelAndInputNumber } from '../../components/input';
-import './style.css';
+// import './style.css';
 
 
 const InputFields = observer(() => {

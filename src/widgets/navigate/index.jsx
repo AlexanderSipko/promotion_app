@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom";
 import { MoonOutlined, SunOutlined } from '@ant-design/icons';
-import './style.css'
+// import './style.css'
 
 export function Header () {
 

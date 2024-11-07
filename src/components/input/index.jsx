@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 
 export function LabelAndInputNumber({ props }) {
     const { inputName, inputValue, cls, funName, placeholder, label } = props;
