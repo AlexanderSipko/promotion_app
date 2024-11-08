@@ -5,12 +5,17 @@ import probabilityCalculator from '../../app/store/зrobabilityСounter'
 import { RightCircleFilled } from '@ant-design/icons';
 import './style.css'
 
+
+
+
 const Probability = observer(({ type }) => {
     const navigate = useNavigate();
+
 
     return (
         <div className='content'>
             some content
+
         </div>
     );
 });
