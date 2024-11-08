@@ -18,6 +18,6 @@ export { App };
 
 
 function TestFoo () {
-
+    // test foo
     return <p>It's new foo</p>
 }
