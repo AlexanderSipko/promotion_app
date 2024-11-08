@@ -1,0 +1,6 @@
+@use '../../app/style/global' as *; // Ensure this path is correct
+
+
+div.content {
+    @extend %box-padding;
+}

@@ -14,7 +14,6 @@ export function Header () {
 
     return <nav>
                 <ul>
-                    <li>LOGO</li>
                     <li><Link to={''}>Home</Link></li>
                     <li><Link to={'Probability'}>Probability</Link></li>
                     <li><Link to={'ToDo'} >ToDo</Link></li>

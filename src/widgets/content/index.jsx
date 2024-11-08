@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { observer } from 'mobx-react';
-import './style.css'
+import './style.scss'
 
 
 const MOCK_DATE = {
@@ -69,7 +69,7 @@ const Content = observer(({ type }) => {
     const data_questions = MOCK_DATE 
 
     return (
-        <div>
+        <div className='content'>
             <a href="https://treningnl.ru/50-voprosov-dlya-povysheniya-samoocenki/">sours</a>
             <h2>{data_questions['tittle']}</h2>
             <p>{data_questions['describe']}</p>
