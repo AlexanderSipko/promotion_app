@@ -8,9 +8,16 @@ const App = () => {
             <AppRouter/>
             <h1>it's backup branch</h1>
             <p>commit «old-release»</p>
+            <TestFoo></TestFoo>
         </>
         
     );
 };
 
 export { App };
+
+
+function TestFoo () {
+
+    return <p>It's new foo</p>
+}
