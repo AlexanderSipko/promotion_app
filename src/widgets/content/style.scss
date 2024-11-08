@@ -1,6 +1,43 @@
 @use '../../app/style/global' as *; // Ensure this path is correct
 
+%margin-mobile {
+    margin: 0;
+}
 
 div.content {
     @extend %box-padding;
+    // border: 1px solid gray;
+    margin: .1rem;
+    border-radius: 0.4rem;
+
+    h2 {
+        @extend %margin-mobile;
+        font-size: 16px;
+    }
+
+    p:first-of-type { // Selects only the first <p> element
+        color: black;
+        margin: .5rem 0;
+        padding: 0 .5rem;
+        text-align: left;
+        opacity: .5;
+        font-size: 12px;
+    } 
+
+    p:last-of-type {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: .2rem 0 1rem 1rem;
+        li {
+            font-size: 16px;
+        }
+        overflow: auto;
+        max-height: 100vh;
+    }
 }
