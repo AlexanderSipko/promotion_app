@@ -6,38 +6,64 @@
 
 div.content {
     @extend %box-padding;
-    // border: 1px solid gray;
-    margin: .1rem;
+    margin: 0.5rem;
     border-radius: 0.4rem;
 
     h2 {
         @extend %margin-mobile;
-        font-size: 16px;
+        font-size: 1.2rem; // Увеличим немного шрифт для мобильных экранов
+        text-align: center;
     }
 
-    p:first-of-type { // Selects only the first <p> element
+    p:first-of-type {
         color: black;
-        margin: .5rem 0;
-        padding: 0 .5rem;
+        margin: 0.5rem 0;
+        padding: 0 1rem;
         text-align: left;
-        opacity: .5;
-        font-size: 12px;
+        opacity: 0.7;
+        font-size: 0.9rem; // Немного уменьшить для мобильной версии
     } 
 
     p:last-of-type {
-        font-size: 12px;
-        margin: 0;
+        font-size: 0.8rem;
+        margin: 0.2rem 0;
         padding: 0;
+        text-align: justify;
     }
 
     ul {
         list-style: none;
         margin: 0;
-        padding: .2rem 0 1rem 1rem;
+        padding: 0.5rem 1rem;
+        max-height: 70vh; // Откорректируем высоту для более легкой прокрутки
+        overflow-y: auto;
+
         li {
-            font-size: 16px;
+            font-size: 1rem;
+            color: rgb(45, 87, 238);
+            margin-bottom: 0.4rem; // Добавим отступы для лучшей читаемости
         }
-        overflow: auto;
-        max-height: 100vh;
+    }
+}
+
+// Медиазапрос для очень маленьких экранов
+@media (max-width: 600px) {
+    div.content {
+        margin: 0.2rem;
+        padding: 1rem;
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            padding: 0 0.5rem;
+        }
+
+        ul li {
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+        }
     }
 }
