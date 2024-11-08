@@ -11,7 +11,7 @@ div.content {
 
     h2 {
         @extend %margin-mobile;
-        font-size: 1.2rem; // Увеличим немного шрифт для мобильных экранов
+        font-size: 1.2rem; // Slightly larger font for mobile screens
         text-align: center;
     }
 
@@ -21,11 +21,11 @@ div.content {
         padding: 0 1rem;
         text-align: left;
         opacity: 0.7;
-        font-size: 0.9rem; // Немного уменьшить для мобильной версии
+        font-size: 0.9rem; // Slightly reduced font size for mobile version
     } 
 
     p:last-of-type {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin: 0.2rem 0;
         padding: 0;
         text-align: justify;
@@ -35,18 +35,45 @@ div.content {
         list-style: none;
         margin: 0;
         padding: 0.5rem 1rem;
-        max-height: 70vh; // Откорректируем высоту для более легкой прокрутки
+        max-height: 70vh; // Adjust height for easier scrolling
         overflow-y: auto;
 
         li {
+            padding: 0;
             font-size: 1rem;
             color: rgb(45, 87, 238);
-            margin-bottom: 0.4rem; // Добавим отступы для лучшей читаемости
+            margin-bottom: 0.4rem; // Added margin for better readability
+        }
+    }
+
+    input {
+        width: calc(100% - 1rem);
+        padding: 0.8rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.4rem;
+        font-size: 1rem;
+        color: #333;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
+        
+        &::placeholder {
+            color: #888;
+        }
+
+        &:focus {
+            border-color: #007bff; // Highlight the border on focus
+            background-color: #fff; // Make the background white when focused
+            outline: none;
+        }
+
+        &:hover {
+            border-color: #007bff; // Change border color on hover
         }
     }
 }
 
-// Медиазапрос для очень маленьких экранов
+// Media query for very small screens
 @media (max-width: 600px) {
     div.content {
         margin: 0.2rem;
