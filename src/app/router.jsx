@@ -5,6 +5,8 @@ import { HomePage } from '@/pages/Home'
 import { NotFound } from '@/pages/NotFound'
 import { Content  } from '@/widgets/content';
 import { Probability  } from '@/widgets/probability';
+import { PhotoIvan  } from '@/widgets/photoIvan';
+import { ToDo  } from '@/widgets/todo';
 
 
 const AppRouter = () => {
@@ -12,8 +14,9 @@ const AppRouter = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<HomePage />} >
-                    <Route path="" element={<Content />} />
+                    <Route path="" element={<PhotoIvan />} />
                     <Route path="Probability" element={<Probability />} />
+                    <Route path="todo" element={<ToDo />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>

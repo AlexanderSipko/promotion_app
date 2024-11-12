@@ -1,0 +1,42 @@
+@use '../../app/style/global' as *; // Ensure this path is correct
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px; // Отступы для удобства
+
+    .photo-container {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto; // Сохраняет пропорции изображения
+        margin: 5px; // Отступы между изображениями
+        flex: 1 1 300px; // Минимальная ширина изображения 300px
+        box-sizing: border-box; // Учитывает отступы в ширину
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        border: 1px solid;
+        padding: .5rem .5rem;
+        margin: 0 1rem;
+        border-radius: .5rem;
+        width: 120px;
+        text-decoration: none;
+        background-color: #b48aa6;
+        color: white;
+    }
+
+    a:hover {
+        transform: scale(0.9);
+    }
+}
